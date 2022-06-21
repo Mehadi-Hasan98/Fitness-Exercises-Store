@@ -7,7 +7,7 @@ const Services = () => {
         Trending
         </h2>
 
-      <div className="grid sm:grid-cols-1 lg:grid-cols-3 md:px-24 gap-20 mt-20 mb-40">
+      <div className="grid sm:grid-cols-1 lg:grid-cols-3 ml-16 gap-16 mt-20 mb-40">
         <div className="card card-compact w-72 shadow-xl">
           <figure>
             <img
