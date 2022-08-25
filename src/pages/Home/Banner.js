@@ -3,15 +3,38 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className="hero min-h-screen px-12 mt-16">
-        <div className="hero-content flex-col lg:flex-row">
-          <img src= "https://images.unsplash.com/photo-1606889464198-fcb18894cf50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=490&q=80" style={{"height": "450px", "width" : "290px"}} className="max-w-sm rounded-lg mr-10 shadow-2xl" alt=''/>
-          <div className='font-mono'>
-            <h1 className="text-5xl font-bold">Box Office News!</h1>
-            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <button className="btn btn-primary">Shop Now</button>
-          </div>
+      <div>
+        <h2 className='text-center text-3xl text-mono font-semibold mt-16 mb-6'>Welcome to IronFit Official</h2>
+        <div class="carousel w-full">
+      <div id="slide1" class="carousel-item relative w-full">
+        <img style={{height : '700px'}} src="https://i.ibb.co/K2y718r/sam-moghadam-khamseh-0sa8-D74iod-I-unsplash-1.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide4" class="btn btn-circle">❮</a> 
+          <a href="#slide2" class="btn btn-circle">❯</a>
         </div>
+      </div> 
+      <div id="slide2" class="carousel-item relative w-full">
+        <img style={{height : '700px'}} src="https://i.ibb.co/CQxLPgd/george-pagan-iii-5-Kfpn0m0-OB4-unsplash-1.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle">❮</a> 
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div> 
+      <div id="slide3" class="carousel-item relative w-full">
+        <img style={{height : '700px'}} src="https://i.ibb.co/hC6prQv/craig-lovelidge-ndr4vtte-VGw-unsplash-1.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle">❮</a> 
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
+      </div> 
+      <div id="slide4" class="carousel-item relative w-full">
+        <img style={{height : '700px'}} src="https://i.ibb.co/qY6SGY3/danielle-cerullo-CQf-Nt66tt-ZM-unsplash-1.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle">❮</a> 
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
       </div>
     );
 };

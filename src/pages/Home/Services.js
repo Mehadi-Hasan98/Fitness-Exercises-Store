@@ -3,12 +3,12 @@ import React from "react";
 const Services = () => {
   return (
     <>
-        <h2 className="text-3xl font-mono text-white font-bold text-center mt-32">
-        Trending
+        <h2 className="text-3xl font-mono font-bold text-center mt-32">
+        Manage Items
         </h2>
 
-      <div className="grid sm:grid-cols-1 lg:grid-cols-3 ml-16 gap-16 mt-20 mb-40">
-        <div className="card card-compact w-72 shadow-xl">
+      <div className="grid sm:grid-cols-1 lg:grid-cols-3 md:ml-10 ml-5 gap-16 mt-16 mb-40">
+        <div className="card card-compact bg-base-300 w-80 shadow-2xl">
           <figure>
             <img
               src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
@@ -16,14 +16,17 @@ const Services = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 className="card-title">Name : Powerline Half Rack</h2>
+            <h2 className="card-title">Price : $20</h2>
+            <p>Description :</p>
+            <p>Quantity : 1000</p>
+            <p>Supplier Name : JK Group</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+              <button className="btn btn-primary">Update</button>
             </div>
           </div>
         </div>
-        <div className="card card-compact w-72 shadow-xl">
+        <div className="card card-compact bg-base-300 w-80 shadow-2xl">
           <figure>
             <img
               src="https://images.unsplash.com/photo-1598289431512-b97b0917affc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
@@ -31,14 +34,17 @@ const Services = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 className="card-title">Name : Stationary Bycycle</h2>
+            <h2 className="card-title">Price : $200</h2>
+            <p>Description :</p>
+            <p>Quantity : 200</p>
+            <p>Supplier Name : JK Group</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+              <button className="btn btn-primary">Update</button>
             </div>
           </div>
         </div>
-        <div className="card card-compact w-72 shadow-xl">
+        <div className="card card-compact bg-base-300 w-80 shadow-2xl">
           <figure>
             <img
               src="https://images.unsplash.com/photo-1620188526357-ff08e03da266?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
@@ -46,14 +52,17 @@ const Services = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 className="card-title">Name : Barbell</h2>
+            <h2 className="card-title">Price : $150</h2>
+            <p>Description :</p>
+            <p>Quantity : 500</p>
+            <p>Supplier Name : JK Group</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+              <button className="btn btn-primary">Update</button>
             </div>
           </div>
         </div>
-        <div className="card card-compact w-72 shadow-xl">
+        <div className="card card-compact bg-base-300 w-80 shadow-2xl">
           <figure>
             <img
               src="https://images.unsplash.com/photo-1540558870477-e8c59bf88421?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
@@ -61,14 +70,17 @@ const Services = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 className="card-title">Name : Treadmill</h2>
+            <h2 className="card-title">Price : $300</h2>
+            <p>Description :</p>
+            <p>Quantity : 200</p>
+            <p>Supplier Name : JK Group</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+              <button className="btn btn-primary">Update</button>
             </div>
           </div>
         </div>
-        <div className="card card-compact w-72 shadow-xl">
+        <div className="card card-compact bg-base-300 w-80 shadow-2xl">
           <figure>
             <img
               src="https://images.unsplash.com/photo-1522898467493-49726bf28798?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
@@ -76,14 +88,17 @@ const Services = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 className="card-title">Name : Rubber ball</h2>
+            <h2 className="card-title">Price : $20</h2>
+            <p>Description :</p>
+            <p>Quantity : 600</p>
+            <p>Supplier Name : JK Group</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+              <button className="btn btn-primary">Update</button>
             </div>
           </div>
         </div>
-        <div className="card card-compact w-72 shadow-xl">
+        <div className="card card-compact bg-base-300 w-80 shadow-2xl">
           <figure>
             <img
               src="https://images.unsplash.com/photo-1632077804406-188472f1a810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
@@ -91,10 +106,13 @@ const Services = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 className="card-title">Name : Dumbbell</h2>
+            <h2 className="card-title">Price : $15</h2>
+            <p>Description :</p>
+            <p>Quantity : 1000</p>
+            <p>Supplier Name : JK Group</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+              <button className="btn btn-primary">Update</button>
             </div>
           </div>
         </div>

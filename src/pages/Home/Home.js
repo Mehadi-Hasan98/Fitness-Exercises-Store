@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Loading from '../Shared/Loading';
+
 import Banner from './Banner';
+import Review from './Review';
 import Services from './Services';
 import Slider from './Slider';
 
 const Home = () => {
+    const [loading, setLoading] = useState(true);
+    if(!loading){
+      <Loading/>
+    }
+    else{
+      setLoading(false);
+    }
     return (
         <div>
             <Banner/>
             <Services/>
             <Slider/>
+            <Review/>
         </div>
     );
 };

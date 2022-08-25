@@ -3,8 +3,8 @@ import React from "react";
 const Slider = () => {
   return (
     <>
-        <h1 className="text-3xl font-mono text-white font-bold text-center mt-32 mb-10">Our Best Selling Equipments</h1>
-<div className="carousel rounded-box mx-auto w-10/12">
+        <h1 className="text-3xl font-mono font-semibold text-center mt-36 mb-10">Our Best Selling Equipments</h1>
+<div className="carousel rounded-box mx-auto mb-32 w-10/12">
       <div className="carousel-item">
         <img
           src="https://images.unsplash.com/photo-1578763363228-6e8428de69b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&h=300"

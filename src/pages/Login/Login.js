@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <div className="flex h-screen justify-center items-center">
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 shadow-2xl">
         <div className="card-body">
           <h2 className="text-center text-2xl font-mono font-bold">Login Form</h2>
           <form>
@@ -78,21 +79,21 @@ const Login = () => {
               value="Login"
             />
           </form>
-          {/* <p>
-            <small>
-              New to ToolKits?{" "}
-              <Link className="text-primary" to="/signup">
+          <p>
+            <small className="text-black">
+              New to IronFit ?{" "}
+              <Link className="text-white" to="/register">
                 Create New Account
               </Link>
             </small>
-          </p> */}
+          </p>
           <div className="divider">OR</div>
-          {/* <button
-            onClick={() => signInWithGoogle()}
-            className="btn btn-outline"
+          <button
+            // onClick={() => signInWithGoogle()}
+            className="btn btn-accent"
           >
             Continue with Google
-          </button> */}
+          </button>
         </div>
       </div>
     </div>

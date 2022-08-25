@@ -1,17 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 
     const menuItems = <>
     
                 
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/shop">Shop</Link></li>
-            <li><Link to="/blogs">Blogs</Link></li>
-            <li><Link to="/featured">Featured</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/about">About Us</Link></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/items">Manage Items</NavLink></li>
+            <li><NavLink to="/blogs">Blogs</NavLink></li>
+            <li><NavLink to="/about">About Us</NavLink></li>
+            <li><NavLink to="/login">Login</NavLink></li>
 
     </>
     return (
@@ -25,7 +23,7 @@ const Navbar = () => {
               {menuItems}
             </ul>
           </div>
-          <a href='...' className="btn btn-ghost normal-case font-bold font-mono text-xl">Fitness Exercise Store</a>
+          <a href='...' className="btn btn-ghost normal-case font-bold font-mono text-2xl">IronFit</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">

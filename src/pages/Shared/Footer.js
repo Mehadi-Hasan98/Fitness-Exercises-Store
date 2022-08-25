@@ -17,7 +17,7 @@ const Footer = () => {
     </div>
   </div> 
   <div>
-    <p>Copyright © 2022 - All right reserved by Fitness Exercises Store</p>
+    <p>Copyright © 2022 - All right reserved by IronFit</p>
   </div>
 </footer>
     );

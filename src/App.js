@@ -1,13 +1,15 @@
-import './App.css';
-import Home from './pages/Home/Home';
-import Navbar from './pages/Shared/Navbar';
-import Footer from './pages/Shared/Footer';
 import { Route, Routes } from 'react-router-dom';
-import Blogs from './pages/Blogs/Blogs';
-import Login from './pages/Login/Login';
+import './App.css';
 import About from './pages/About/About';
-import Shop from './pages/Shop/Shop';
+import Blogs from './pages/Blogs/Blogs';
 import Featured from './pages/Featured/Featured';
+import Home from './pages/Home/Home';
+import Items from './pages/Items/Items';
+import Login from './pages/Login/Login';
+import Register from './pages/Login/Register';
+import Footer from './pages/Shared/Footer';
+import Navbar from './pages/Shared/Navbar';
+import NotFound from './pages/Shared/NotFound';
 
 function App() {
   return (
@@ -15,11 +17,13 @@ function App() {
         <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='shop' element={<Shop/>}/>
+        <Route path='items' element={<Items/>}/>
         <Route path='blogs' element={<Blogs/>}/>
         <Route path='featured' element={<Featured/>}/>
         <Route path='login' element={<Login/>}/>
+        <Route path='register' element={<Register/>}/>
         <Route path='about' element={<About/>}/>
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
         <Footer/>
     </div>
