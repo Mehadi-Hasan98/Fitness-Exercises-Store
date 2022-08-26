@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "name": "Powerline Half Rack",
+    "price": "20",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+    "quantity": "1000",
+    "supplier": "JK Group"
+  },
+  {
+    "id": "2",
+    "name": "Stationary Bycycle",
+    "price": "200",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "quantity": "200",
+    "supplier": "JK Group"
+  },
+  {
+    "id": "3",
+    "name": "Barbell",
+    "price": "150",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1620188526357-ff08e03da266?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "quantity": "500",
+    "supplier": "JK Group"
+  },
+  {
+    "id": "4",
+    "name": "Treadmill",
+    "price": "300",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1540558870477-e8c59bf88421?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "quantity": "200",
+    "supplier": "JK Group"
+  },
+  {
+    "id": "5",
+    "name": "Rubber ball",
+    "price": "20",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1522898467493-49726bf28798?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "quantity": "600",
+    "supplier": "JK Group"
+  },
+  {
+    "id": "6",
+    "name": "Dumbbell",
+    "price": "15",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1632077804406-188472f1a810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "quantity": "1000",
+    "supplier": "JK Group"
+  },
+  {
+    "id": "7",
+    "name": "Powerline Half Rack",
+    "price": "20",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+    "quantity": "1000",
+    "supplier": "JK Group"
+  },
+  {
+    "id": "8",
+    "name": "Stationary Bycycle",
+    "price": "200",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "quantity": "200",
+    "supplier": "JK Group"
+  },
+  {
+    "id": "9",
+    "name": "Barbell",
+    "price": "150",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1620188526357-ff08e03da266?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "quantity": "500",
+    "supplier": "JK Group"
+  },
+  {
+    "id": "10",
+    "name": "Treadmill",
+    "price": "300",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1540558870477-e8c59bf88421?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "quantity": "200",
+    "supplier": "JK Group"
+  },
+  {
+    "id": "11",
+    "name": "Rubber ball",
+    "price": "20",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1522898467493-49726bf28798?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "quantity": "600",
+    "supplier": "JK Group"
+  },
+  {
+    "id": "12",
+    "name": "Dumbbell",
+    "price": "15",
+    "description": "Our New Upcoming Product",
+    "img": "https://images.unsplash.com/photo-1632077804406-188472f1a810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fGd5bSUyMGVxdWlwbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "quantity": "1000",
+    "supplier": "JK Group"
+  }
+]
