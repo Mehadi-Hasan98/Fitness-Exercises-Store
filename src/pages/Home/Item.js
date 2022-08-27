@@ -7,7 +7,7 @@ const Item = ({item}) => {
     const {id, name, price, img, description, quantity, supplier} = item;
     const navigate = useNavigate();
     const navigateToItemDetail = id => {
-        navigate(`/item/${id}`)
+        navigate(`/item/${id}`);
     }
     const [loading, setLoading] = useState(true);
     if(!loading){
