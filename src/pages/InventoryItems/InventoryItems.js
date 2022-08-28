@@ -1,4 +1,6 @@
 import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import useManageInventory from '../Hooks/useManageInventory';
 
 const InventoryItems = ({item}) => {
@@ -16,6 +18,7 @@ const InventoryItems = ({item}) => {
                 const remaining = items.filter(item => item._id !== id);
                 setItems(remaining);
             })
+            toast('Item deleted successfully');
         }
     }
     const { name, price, img, description, quantity, supplier } = item;
@@ -36,6 +39,7 @@ const InventoryItems = ({item}) => {
   </div>
 </div>
 </div>
+<ToastContainer/>
         </div>
     );
 };

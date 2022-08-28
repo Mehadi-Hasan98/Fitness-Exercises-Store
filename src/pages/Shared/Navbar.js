@@ -1,5 +1,6 @@
 import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { HiOutlineLogout } from 'react-icons/hi';
 import { Link, NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
 
@@ -27,7 +28,7 @@ const Navbar = () => {
             
             <li><NavLink to="/blogs">Blogs</NavLink></li>
             <li><NavLink to="/about">About Us</NavLink></li>
-            <li>{user? <button className="btn btn-ghost text-xl"  onClick={logout} >Log Out</button> : <Link to="/login">Login</Link>}</li>
+            <li>{user? <button className="btn btn-ghost text-xl"  onClick={logout} >Log Out<HiOutlineLogout/></button> : <Link to="/login">Login</Link>}</li>
 
     </>
     return (
