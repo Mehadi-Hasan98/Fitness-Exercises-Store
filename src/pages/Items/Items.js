@@ -17,9 +17,9 @@ const Items = () => {
   return (
     <div>
       <h2 className="text-3xl text-white text-center font-mono mt-16 font-bold">Our Products</h2>
-      <div className="md:mr-8 ml-5 gap-16 mt-12 mb-20">
+      <div className="md:mr-8 gap-16 mt-12 mb-20">
         
-      <div class="card-body grid sm:grid-cols-1 lg:grid-cols-3 gap-6 mr-6">
+      <div class="card-body grid sm:grid-cols-1 lg:grid-cols-3 gap-6">
            {
             items.map(item => <InventoryItems
             key={item._id}

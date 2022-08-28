@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Featured from '../Featured/Featured';
 import Loading from '../Shared/Loading';
 
 import Banner from './Banner';
@@ -20,6 +21,7 @@ const Home = () => {
             <Services/>
             <Slider/>
             <Review/>
+            <Featured/>
         </div>
     );
 };
