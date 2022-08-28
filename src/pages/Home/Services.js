@@ -21,10 +21,10 @@ const Services = () => {
   return (
     <>
         <h2 className="text-3xl text-white font-mono font-bold text-center mt-32">
-        Manage Items
+        Our Latest Items
         </h2>
         {/* className="grid sm:grid-cols-1 lg:grid-cols-3 md:ml-10 ml-5 gap-16 mt-16 mb-40" */}
-        <div className="card-body grid sm:grid-cols-1 lg:grid-cols-3 gap-6 mr-6">
+        <div className="card-body grid sm:grid-cols-1 lg:grid-cols-3 gap-6 pl-5 mr-4">
           
   {
     items.slice(0, 6).map(item => <Item
@@ -35,7 +35,7 @@ const Services = () => {
     </Item>)
   }
   <div className='mb-10 ml-14 mt-8'>
-      <Link to="/items"><button class="py-2 px-16 bg-red-400 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Manage Inventories </button></Link>
+      <Link to="/items"><button class="py-2 pl-5 pr-5 px-16 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Manage Inventories </button></Link>
       </div>
 </div>
     </>

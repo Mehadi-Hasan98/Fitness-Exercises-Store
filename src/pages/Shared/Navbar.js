@@ -1,7 +1,9 @@
 import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { BiLogIn } from 'react-icons/bi';
 import { HiOutlineLogout } from 'react-icons/hi';
 import { Link, NavLink } from 'react-router-dom';
+import main from '../../assets/images/main.png';
 import auth from '../../firebase.init';
 
 const Navbar = () => {
@@ -28,7 +30,7 @@ const Navbar = () => {
             
             <li><NavLink to="/blogs">Blogs</NavLink></li>
             <li><NavLink to="/about">About Us</NavLink></li>
-            <li>{user? <button className="btn btn-ghost text-xl"  onClick={logout} >Log Out<HiOutlineLogout/></button> : <Link to="/login">Login</Link>}</li>
+            <li>{user? <button className="btn btn-ghost text-xl"  onClick={logout} >Log Out<HiOutlineLogout/></button> : <Link to="/login">Login<BiLogIn/></Link>}</li>
 
     </>
     return (
@@ -42,7 +44,8 @@ const Navbar = () => {
               {menuItems}
             </ul>
           </div>
-          <a href='...' className="btn btn-ghost normal-case font-bold font-mono text-2xl">IronFit</a>
+          <img style={{height: '30px'}} src={main}/>
+          <a href='/' className="btn btn-ghost normal-case font-bold font-mono text-2xl">IronFit</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">

@@ -15,8 +15,10 @@ const InventoryItems = ({item}) => {
             })
             .then(res => res.json())
             .then(data => {
+                window.location.reload(false);
                 const remaining = items.filter(item => item._id !== id);
                 setItems(remaining);
+                
             })
             toast('Item deleted successfully');
         }

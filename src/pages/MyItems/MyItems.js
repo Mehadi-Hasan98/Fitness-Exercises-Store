@@ -21,7 +21,7 @@ const MyItems = () => {
         <div>
             <h2 className='text-center text-3xl font-mono font-bold text-white mt-12 mb-12'>My Items</h2>
 
-            <div className="card-body grid sm:grid-cols-1 lg:grid-cols-3 gap-6 mr-6">
+            <div className="card-body grid sm:grid-cols-1 lg:grid-cols-3 gap-6 pl-5 mr-6">
 
                 {
                     items.map(item => <InventoryItems

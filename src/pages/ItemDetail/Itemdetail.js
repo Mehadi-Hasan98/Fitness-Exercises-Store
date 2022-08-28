@@ -8,10 +8,7 @@ const Itemdetail = () => {
     const {itemId} = useParams();
 
     const [newData, setNewData] = useState(false);
-    const [stockNumber, setStockNumber] = useState({
-      stock: "",
-     
-    });
+    const [stockNumber, setStockNumber] = useState({stock: ""});
 
     let name, value;
     const getUserData = (e) => {
@@ -31,7 +28,7 @@ const Itemdetail = () => {
         .then(data => setItem(data))
     }, []);
 
-
+    // delivered button
     const handleDelivered = async (id, quantity) => {
       window.location.reload(false);
       const getQuantity = parseInt(quantity) - 1;
@@ -50,6 +47,8 @@ const Itemdetail = () => {
         }
       });
     };
+
+    // update data
     const handleUpdate = async (id, quantity) => {
       const {stock} = stockNumber;
       toast('Stock updated');
@@ -75,7 +74,7 @@ const Itemdetail = () => {
   
     return (
         <>
-        <div class="card w-96 bg-base-100 shadow-2xl mt-10 mb-10 mx-auto font-mono">
+        <div class="card w-80 ml-5 bg-base-100 shadow-2xl mt-10 mb-10 font-mono">
         <figure><img src={item.img}alt="Item" /></figure>
         <div class="card-body">
         <h2 className="card-title">Name:{item.name}</h2>

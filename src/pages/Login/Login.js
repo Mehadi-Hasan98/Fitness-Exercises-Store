@@ -32,7 +32,7 @@ const Login = () => {
 
   if (error || gError) {
     signInError = (
-      <p className="text-red-500">
+      <p className="text-red-700 font-bold">
         <small>{error?.message || gError?.message}</small>
       </p>
     );
@@ -58,14 +58,14 @@ const Login = () => {
       }
 
   return (
-    <div className="flex h-screen justify-center items-center mt-10">
+    <div className="flex h-screen justify-center items-center mt-10 mb-14">
     <div className="card w-96 shadow-2xl">
       <div className="card-body">
-        <h2 className="text-center text-2xl font-semibold font-mono text-white">Login Form</h2>
+        <h2 className="text-center text-2xl font-semibold font-mono text-white">Please Login</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-control w-full max-w-xs">
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text text-zinc-100">Email</span>
             </label>
             <input
               type="email"
@@ -97,7 +97,7 @@ const Login = () => {
           </div>
           <div className="form-control w-full max-w-xs">
             <label className="label">
-              <span className="label-text">Password</span>
+              <span className="label-text text-zinc-100">Password</span>
             </label>
             <input
               type="password"
@@ -130,7 +130,7 @@ const Login = () => {
           {signInError}
           <br/>
           <input
-            className="btn w-full max-w-xs text-white"
+            className="py-2 w-full bg-cyan-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
             type="submit"
             value="Login"
           />
@@ -148,9 +148,9 @@ const Login = () => {
         <div className="divider">OR</div>
         <button
           onClick={() => signInWithGoogle()}
-          className="btn btn-accent"
+          className="py-2 px-4 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
         >
-          Continue with Google
+         Continue with Google
         </button>
       </div>
     </div>

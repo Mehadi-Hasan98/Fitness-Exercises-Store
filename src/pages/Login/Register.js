@@ -30,14 +30,14 @@ const Register = () => {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
      if(user || gUser){
-        navigate('/');
+        navigate('/items');
      }
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
         console.log('update done');
-        navigate('/')
+        navigate('/items')
     }
 
     return (
@@ -117,7 +117,7 @@ const Register = () => {
                         </div>
 
                         {signInError}
-                        <input className='btn w-full max-w-xs text-white' type="submit" value="Sign Up" />
+                        <input className='py-2 bg-cyan-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 w-full' type="submit" value="Sign Up" />
                     </form>
                     <p><small className='text-white'>Already have an account ? <Link className='text-white' to="/login">Please login</Link></small></p>
                     <div className="divider">OR</div>
