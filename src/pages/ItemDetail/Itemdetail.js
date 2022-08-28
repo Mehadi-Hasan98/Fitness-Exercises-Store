@@ -1,13 +1,16 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Itemdetail = () => {
+  
     const {itemId} = useParams();
 
     const [newData, setNewData] = useState(false);
     const [stockNumber, setStockNumber] = useState({
       stock: "",
+     
     });
 
     let name, value;
@@ -30,9 +33,12 @@ const Itemdetail = () => {
 
 
     const handleDelivered = async (id, quantity) => {
+      window.location.reload(false);
       const getQuantity = parseInt(quantity) - 1;
+      toast('item delivered successfully');
       const newQuantity = {
         quantity: getQuantity.toString(),
+        
       };
   
       // send data to the mongodb server and update
@@ -46,6 +52,7 @@ const Itemdetail = () => {
     };
     const handleUpdate = async (id, quantity) => {
       const {stock} = stockNumber;
+      toast('Stock updated');
       console.log(stock)
       const getQuantity = parseInt(quantity) + parseInt(stock);
 
@@ -63,7 +70,7 @@ const Itemdetail = () => {
         }
 
       });
-
+      window.location.reload(false);
     };
   
     return (
@@ -87,7 +94,7 @@ const Itemdetail = () => {
       <div className='text-center mb-10'>
       <Link to="/items"><button class="py-2 px-4 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Manage Inventories</button></Link>
       </div>
-        
+        <ToastContainer/>
         </>
 
     );
