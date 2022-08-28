@@ -14,7 +14,7 @@ const Blogs = () => {
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">See more</button>
+      <button class="py-2 px-4 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">See more</button>
     </div>
   </div>
 </div>
@@ -24,7 +24,7 @@ const Blogs = () => {
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">See more</button>
+      <button class="py-2 px-4 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">See more</button>
     </div>
   </div>
 </div>
@@ -34,7 +34,7 @@ const Blogs = () => {
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">See more</button>
+      <button class="py-2 px-4 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">See more</button>
     </div>
   </div>
 </div>

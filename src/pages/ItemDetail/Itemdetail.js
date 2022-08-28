@@ -3,8 +3,9 @@ import { Link, useParams } from 'react-router-dom';
 
 const Itemdetail = () => {
     const {itemId} = useParams();
+
+
     const [item, setItem] = useState([]);
-   
     useEffect( ()=> {
         const url = `http://localhost:5000/item/${itemId}`;
   

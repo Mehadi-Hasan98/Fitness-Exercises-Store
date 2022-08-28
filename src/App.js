@@ -25,8 +25,8 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='items' element={<RequireAuth><Items/></RequireAuth>}/>
         <Route path='/item/:itemId' element={<RequireAuth><Itemdetail/></RequireAuth>}/>
-        <Route path='additem' element={<RequireAuth><AddItem/></RequireAuth>}/>
-        <Route path='myitems' element={<RequireAuth><MyItems/></RequireAuth>}/>
+        <Route path='/additem' element={<RequireAuth><AddItem/></RequireAuth>}/>
+        <Route path='/myitems' element={<RequireAuth><MyItems/></RequireAuth>}/>
         
         <Route path='blogs' element={<Blogs/>}/>
         <Route path='featured' element={<Featured/>}/>

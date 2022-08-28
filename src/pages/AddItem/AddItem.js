@@ -1,19 +1,34 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
 
 const AddItem = () => {
 
     const {
         register,
-        handleSubmit,
+        handleSubmit, reset
       } = useForm();
       const [user] = useAuthState(auth);
 
       const onSubmit = (data) => {
-       
+       const url = `http://localhost:5000/item`;
+       fetch(url, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+       })
+       .then(res=> res.json())
+       .then(result=> 
+        console.log(result))
+        toast('Item added successfully');
+        reset();
       };
+      
     return (
         <div className="flex h-screen justify-center items-center mt-10 mb-12">
     <div className="card w-96 shadow-2xl">
@@ -114,6 +129,7 @@ const AddItem = () => {
         </form>
       </div>
     </div>
+    <ToastContainer/>
   </div>
     );
 };

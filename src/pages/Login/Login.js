@@ -1,7 +1,9 @@
 import React from "react";
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
 import Loading from "../Shared/Loading";
 
@@ -16,6 +18,8 @@ const Login = () => {
 
   const [signInWithEmailAndPassword, user, loading, error] =
   useSignInWithEmailAndPassword(auth);
+
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   let signInError;
   const navigate = useNavigate();
@@ -41,6 +45,17 @@ const Login = () => {
       const onSubmit = (data) => {
         signInWithEmailAndPassword(data.email, data.password);
       };
+
+      const resetPassword = async() => {
+        const email = emailRef.current.value;
+        if(email){
+          await sendPasswordResetEmail(email);
+        toast('sent email');
+        }
+        else{
+          toast('Please enter your email address')
+        }
+      }
 
   return (
     <div className="flex h-screen justify-center items-center mt-10">
@@ -128,6 +143,8 @@ const Login = () => {
             </Link>
           </small>
         </p>
+        <p className="text-white"> Forget Password?<button className="btn btn-link text-white pe-auto text-decoration-none" onClick={resetPassword}>Reset Password</button>
+      </p>
         <div className="divider">OR</div>
         <button
           onClick={() => signInWithGoogle()}
@@ -137,6 +154,7 @@ const Login = () => {
         </button>
       </div>
     </div>
+    <ToastContainer/>
   </div>
   );
 };
