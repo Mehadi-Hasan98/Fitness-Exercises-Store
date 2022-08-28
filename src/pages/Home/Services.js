@@ -35,7 +35,7 @@ const Services = () => {
     </Item>)
   }
   <div className='mb-10 ml-14 mt-8'>
-      <Link to="/items"><button class="py-2 pl-5 pr-5 px-16 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Manage Inventories </button></Link>
+      <Link to="/items"><button className="py-2 pl-5 pr-5 px-16 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Manage Inventories </button></Link>
       </div>
 </div>
     </>

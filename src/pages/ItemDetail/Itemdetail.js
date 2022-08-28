@@ -73,28 +73,28 @@ const Itemdetail = () => {
     };
   
     return (
-        <>
-        <div class="card w-80 ml-5 bg-base-100 shadow-2xl mt-10 mb-10 font-mono">
+        <div>
+        <div className="card w-80 mx-auto bg-base-100 shadow-2xl mt-16 mb-10 font-mono">
         <figure><img src={item.img}alt="Item" /></figure>
-        <div class="card-body">
+        <div className="card-body">
         <h2 className="card-title">Name:{item.name}</h2>
   <h2 className="card-title">Price : ${item.price}</h2>
   <p>Description : {item.description}</p>
   <p>Quantity : {item.quantity}</p>
   <p>Supplier Name : {item.supplier}</p>
         </div>
-        <button onClick={() => handleDelivered(item._id, item.quantity)} class="py-2 mx-auto px-4 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 mb-4">Delivered</button>
+        <button onClick={() => handleDelivered(item._id, item.quantity)} className="py-2 mx-auto px-4 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 mb-4">Delivered</button>
       </div>
 
       <div className='text-center mt-10 mb-10 py-4 font-mono'>
       <input className='rounded-lg py-2 px-4' type="number" id='stock' name='stock' placeholder='Enter Quantity Number' value={stockNumber.stock} onChange={getUserData}/>
-        <button onClick={() => handleUpdate(item._id, item.quantity)} class="py-2 ml-4 px-4 bg-rose-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Restock</button>
+        <button onClick={() => handleUpdate(item._id, item.quantity)} className="py-2 ml-4 px-4 bg-rose-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Restock</button>
       </div>
       <div className='text-center mb-10'>
-      <Link to="/items"><button class="py-2 px-4 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Manage Inventories</button></Link>
+      <Link to="/items"><button className="py-2 px-4 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Manage Inventories</button></Link>
       </div>
         <ToastContainer/>
-        </>
+        </div>
 
     );
 };

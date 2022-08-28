@@ -19,7 +19,7 @@ const Items = () => {
       <h2 className="text-3xl text-white text-center font-mono mt-14 font-bold">Our Products</h2>
       <div className="md:mr-10 gap-16 mt-10 mb-14">
         
-      <div class="card-body pl-5 grid sm:grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="card-body pl-5 grid sm:grid-cols-1 lg:grid-cols-3 gap-6">
            {
             items.map(item => <InventoryItems
             key={item._id}
@@ -31,7 +31,7 @@ const Items = () => {
           </div>
       </div>
       <div className="text-center">
-      <Link to="/additem"><button class="py-2 mb-14 px-4 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Add New Item</button></Link>
+      <Link to="/additem"><button className="py-2 mb-14 px-4 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Add New Item</button></Link>
       </div>
     </div>
   );
