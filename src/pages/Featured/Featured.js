@@ -6,11 +6,11 @@ const Featured = () => {
       <h2 className="text-3xl text-zinc-100 text-center font-mono font-bold mt-32">
         Daily Fitness Tips
       </h2>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-16 mx-10 gap-10 mb-32">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-16 mx-10 gap-10 mb-32 font-mono">
         <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure>
             <img
-              src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=550"
+              src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=650"
               alt="Album"/>
           </figure>
           <div className="card-body">
@@ -33,7 +33,7 @@ const Featured = () => {
         <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure>
             <img
-              src="https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=550"
+              src="https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=650"
               alt="Album"/>
           </figure>
           <div className="card-body">

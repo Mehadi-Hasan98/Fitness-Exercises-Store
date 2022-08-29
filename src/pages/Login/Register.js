@@ -123,7 +123,7 @@ const Register = () => {
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-accent"
+                        className="py-2 px-4 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
                     >Continue with Google</button>
                 </div>
             </div>

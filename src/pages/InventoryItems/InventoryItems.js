@@ -32,7 +32,7 @@ const InventoryItems = ({item}) => {
 </figure>
 <div className="card-body font-mono">
   <h2 className="card-title">Name : {name}</h2>
-  <h2 className="card-title">Price : {price}</h2>
+  <h2 className="card-title">Price : ${price}</h2>
   <p>Description : {description}</p>
   <p>Quantity : {quantity}</p>
   <p>Supplier Name : {supplier}</p>

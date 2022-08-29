@@ -6,7 +6,7 @@ const Blogs = () => {
       <h1 className="text-3xl text-white text-center font-mono mt-16">
         Welcome to our daily Blogs
       </h1>
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 mt-16 gap-4 mb-16 md:ml-16 ml-5">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 mt-16 gap-4 mb-16 md:ml-16 ml-9">
        
         <div className="card w-80 bg-base-100 shadow-xl">
   <figure><img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80" alt="Shoes" /></figure>
