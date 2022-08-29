@@ -10,7 +10,7 @@ const MyItems = () => {
     const [items, setItems] = useState([]);
     useEffect( () =>{
         const email = user.email;
-        const url = `http://localhost:5000/myitems?email=${email}`;
+        const url = `https://hidden-refuge-89046.herokuapp.com/myitems?email=${email}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setItems(data))

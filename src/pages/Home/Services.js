@@ -14,7 +14,7 @@ const Services = () => {
   }
 
   useEffect( () => {
-    fetch('http://localhost:5000/item')
+    fetch('https://hidden-refuge-89046.herokuapp.com/item')
     .then(res=> res.json()
     .then(data=> setItems(data)))
   }, [])

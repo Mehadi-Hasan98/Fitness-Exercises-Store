@@ -14,7 +14,7 @@ const AddItem = () => {
       const [user] = useAuthState(auth);
 
       const onSubmit = (data) => {
-       const url = `http://localhost:5000/item`;
+       const url = `https://hidden-refuge-89046.herokuapp.com/item`;
        fetch(url, {
         method: 'POST',
         headers: {

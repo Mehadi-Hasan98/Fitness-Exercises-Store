@@ -22,7 +22,7 @@ const Itemdetail = () => {
 
     const [item, setItem] = useState({});
     useEffect( ()=> {
-        const url = `http://localhost:5000/item/${itemId}`;
+        const url = `https://hidden-refuge-89046.herokuapp.com/item/${itemId}`;
   
         fetch(url)
         .then(res=> res.json())
@@ -40,7 +40,7 @@ const Itemdetail = () => {
       };
   
       // send data to the mongodb server and update
-      const url = `http://localhost:5000/item/${id}`
+      const url = `https://hidden-refuge-89046.herokuapp.com/item/${id}`
       await axios.put(url, newQuantity).then((response) => {
         const { data } = response;
         if (data) {
@@ -62,7 +62,7 @@ const Itemdetail = () => {
       
   
       // send data to the monogodb server and update
-      const url = `http://localhost:5000/item/${id}`
+      const url = `https://hidden-refuge-89046.herokuapp.com/item/${id}`
       await axios.put(url, newQuantity).then((response) => {
         const { data } = response;
         if (data) {
