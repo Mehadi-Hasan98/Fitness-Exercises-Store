@@ -18,8 +18,8 @@ const Item = ({item}) => {
     }
     return (
         
-        <div className="md:ml-10 ml-4">
-            <div className="card card-compact bg-base-300 w-80 shadow-2xl">
+        <div className="md:ml-10">
+            <div className="card card-compact bg-base-200 w-80 shadow-xl mb-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-200 duration-100 ...">
             <figure>
   <img src={img}/>
 </figure>

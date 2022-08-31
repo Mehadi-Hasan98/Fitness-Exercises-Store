@@ -6,6 +6,7 @@ import Banner from './Banner';
 import Review from './Review';
 import Services from './Services';
 import Slider from './Slider';
+import Stat from './Stat';
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
@@ -20,8 +21,10 @@ const Home = () => {
             <Banner/>
             <Services/>
             <Slider/>
+           
             <Review/>
             <Featured/>
+            <Stat/>
         </div>
     );
 };

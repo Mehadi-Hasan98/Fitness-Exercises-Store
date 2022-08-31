@@ -20,7 +20,7 @@ const Services = () => {
   }, [])
   return (
     <>
-        <h2 className="text-3xl text-white font-mono font-bold text-center mt-32">
+        <h2 className="text-3xl text-zinc-800 font-mono font-bold text-center mt-32">
         Our Latest Items
         </h2>
         {/* className="grid sm:grid-cols-1 lg:grid-cols-3 md:ml-10 ml-5 gap-16 mt-16 mb-40" */}
@@ -35,7 +35,7 @@ const Services = () => {
     </Item>)
   }
   <div className='mb-10 ml-14 mt-8'>
-      <Link to="/items"><button className="py-2 pl-5 ml-5 pr-5 px-16 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Manage Inventories </button></Link>
+      <Link to="/items"><button className="py-2 pl-5 ml-5 pr-5 px-16 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Manage Inventories </button></Link>
       </div>
 </div>
     </>

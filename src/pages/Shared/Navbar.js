@@ -48,7 +48,8 @@ const Navbar = () => {
           <a href='/' className="btn btn-ghost normal-case font-bold font-mono text-2xl">IronFit</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal p-0">
+          <ul className="menu menu-horizontal py-0 p-0">
+           
             {menuItems}
           </ul>
         </div>

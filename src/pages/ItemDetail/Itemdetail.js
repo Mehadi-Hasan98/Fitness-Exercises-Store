@@ -3,12 +3,15 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 const Itemdetail = () => {
   
     const {itemId} = useParams();
 
     const [newData, setNewData] = useState(false);
     const [stockNumber, setStockNumber] = useState({stock: ""});
+  
+  
 
     let name, value;
     const getUserData = (e) => {
@@ -51,11 +54,12 @@ const Itemdetail = () => {
 
     // update data
     const handleUpdate = async (id, quantity) => {
+      
       const {stock} = stockNumber;
       toast('Stock updated');
       console.log(stock)
       const getQuantity = parseInt(quantity) + parseInt(stock);
-
+     
       const newQuantity = {
         quantity: getQuantity.toString(),
       };
@@ -68,9 +72,9 @@ const Itemdetail = () => {
         if (data) {
           setNewData(!newData);
         }
-
+        window.location.reload(false);
       });
-      window.location.reload(false);
+     
     };
   
     return (
@@ -88,9 +92,9 @@ const Itemdetail = () => {
       </div>
 
       <div className='text-center mt-10 mb-10 py-4 font-mono'>
-      <input className='rounded-lg py-2 px-4' type="number" id='stock' name='stock' placeholder='Enter Quantity Number' value={stockNumber.stock} onChange={getUserData}/>
+      <input className='rounded-lg py-2 px-4 outline' type="number" id='stock' name='stock' placeholder='Enter Quantity Number' value={stockNumber.stock} onChange={getUserData}/>
       
-        <button onClick={() => handleUpdate(item._id, item.quantity)} className="py-2 ml-4 px-4 bg-rose-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Restock</button>
+        <button onClick={() => handleUpdate(item._id, item.quantity)} className="py-2 ml-4 px-4 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono">Restock</button>
       </div>
 
       <div className='text-center mb-10'>

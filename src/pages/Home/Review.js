@@ -3,8 +3,8 @@ import React from 'react';
 const Review = () => {
     return (
         <div>
-            <h2 className='text-center text-white text-3xl font-mono font-semibold'>What Our Client Says!!</h2>
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:ml-16 ml-9 mb-12 mt-12 gap-4 font-mono'>
+            <h2 className='text-center text-zinc-800 text-3xl font-mono font-semibold mt-32'>What Our Client Says!!</h2>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:ml-16 ml-5 mb-12 mt-12 gap-4 font-mono'>
             <div className="card card-compact w-80 bg-base-100 shadow-xl">
   <figure><img src="https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80" alt="Shoes" /></figure>
   <div className="card-body">

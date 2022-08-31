@@ -31,9 +31,9 @@ const AddItem = () => {
       
     return (
         <div className="flex h-screen justify-center items-center mt-10 mb-12">
-    <div className="card w-80 shadow-2xl">
+    <div className="card w-80 shadow-2xl bg-cyan-400">
       <div className="card-body">
-        <h2 className="text-center text-2xl font-semibold font-mono text-zinc-100">Add A New Item</h2>
+        <h2 className="text-center text-2xl font-semibold font-mono text-zinc-800">Add A New Item</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-control w-full max-w-xs">
             <input
@@ -122,7 +122,7 @@ const AddItem = () => {
          
           <br/>
           <input
-            className="btn w-full max-w-xs text-white bg-rose-500 outline"
+            className="btn w-full max-w-xs text-white bg-cyan-700 outline"
             type="submit"
             value="Add New Item"
           />

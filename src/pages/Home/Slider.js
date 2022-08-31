@@ -3,7 +3,7 @@ import React from "react";
 const Slider = () => {
   return (
     <>
-        <h1 className="text-3xl font-mono text-white font-semibold text-center mt-36 mb-10">Our Best Selling Equipments</h1>
+        <h1 className="text-3xl font-mono text-zinc-800 font-semibold text-center mt-36 mb-10">Our Best Selling Equipments</h1>
 <div className="carousel rounded-box mx-auto mb-32 w-full">
       <div className="carousel-item">
         <img

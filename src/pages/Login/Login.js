@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
+import useToken from "../Hooks/useToken";
 import Loading from "../Shared/Loading";
 
 const Login = () => {
@@ -14,12 +15,17 @@ const Login = () => {
     register,
     formState: { errors },
     handleSubmit,
+    
   } = useForm();
 
   const [signInWithEmailAndPassword, user, loading, error] =
   useSignInWithEmailAndPassword(auth);
 
+  
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+  
+
+  const [token] = useToken(user);
 
   let signInError;
   const navigate = useNavigate();
@@ -38,39 +44,35 @@ const Login = () => {
     );
   }
 
-  if( user || gUser) {
+  if(user || gUser){
+    navigate('/');
+  }
+  if(token) {
     navigate(from, { replace: true });
   }
 
-      const onSubmit = (data) => {
-        signInWithEmailAndPassword(data.email, data.password);
+      const onSubmit = async (data) => {
+      await signInWithEmailAndPassword(data.email, data.password);
+      navigate(from, { replace: true });
       };
 
-      const resetPassword = async() => {
-        const email = emailRef.current.value;
-        if(email){
-          await sendPasswordResetEmail(email);
-        toast('sent email');
-        }
-        else{
-          toast('Please enter your email address')
-        }
-      }
-
+     
+      
   return (
     <div className="flex h-screen justify-center items-center mt-10 mb-14">
-    <div className="card w-96 shadow-2xl">
+    <div className="card w-96 shadow-2xl bg-base-100">
       <div className="card-body">
-        <h2 className="text-center text-2xl font-semibold font-mono text-white">Please Login</h2>
+        <h2 className="text-center text-2xl font-semibold font-mono text-zinc-600">Please Login</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-control w-full max-w-xs">
             <label className="label">
-              <span className="label-text text-zinc-100">Email</span>
+              <span className="label-text text-zinc-600">Email</span>
             </label>
             <input
               type="email"
               placeholder="Your Email"
               className="input input-bordered w-full max-w-xs"
+             
               {...register("email", {
                 required: {
                   value: true,
@@ -97,7 +99,7 @@ const Login = () => {
           </div>
           <div className="form-control w-full max-w-xs">
             <label className="label">
-              <span className="label-text text-zinc-100">Password</span>
+              <span className="label-text text-zinc-600">Password</span>
             </label>
             <input
               type="password"
@@ -130,25 +132,29 @@ const Login = () => {
           {signInError}
           <br/>
           <input
-            className="py-2 w-full bg-cyan-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+            className="py-2 w-full bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
             type="submit"
             value="Login"
           />
         </form>
         <p>
-          <small className="text-white">
+          <small className="text-zinc-600">
             New to IronFit ?{" "}
-            <Link className="text-white" to="/register">
+            <Link className="text-zinc-600" to="/register">
               Create New Account
             </Link>
           </small>
         </p>
-        <p className="text-white"> Forget Password?<button className="btn btn-link text-white pe-auto text-decoration-none" onClick={resetPassword}>Reset Password</button>
+        <p className="text-zinc-600"> Forget Password?<button className="btn btn-link text-zinc-600 pe-auto text-decoration-none"  onClick={async (data) => {
+          await sendPasswordResetEmail(data.email);
+          toast('Sent email');
+          
+        }}>Reset Password</button>
       </p>
         <div className="divider">OR</div>
         <button
           onClick={() => signInWithGoogle()}
-          className="py-2 px-4 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+          className="py-2 px-4 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
         >
          Continue with Google
         </button>

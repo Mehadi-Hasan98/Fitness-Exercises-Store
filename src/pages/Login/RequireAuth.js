@@ -23,13 +23,13 @@ const RequireAuth = ({children}) => {
 
     {
         return <div className='text-center mt-5'>
-            <h3 className='text-gray-100 mt-16 text-2xl font-mono'>Your Email is not verified!!</h3>
-            <h5 className='text-slate-100 mt-4 mb-4 font-mono'>Please verify your email address</h5>
+            <h3 className='text-zinc-800 mt-16 text-2xl font-mono'>Your Email is not verified!!</h3>
+            <h5 className='text-slate-800 mt-4 mb-4 font-mono'>Please verify your email address</h5>
             <button
-            className='py-2 px-16 bg-red-400 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono mb-20'
+            className='py-2 px-16 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 font-mono mb-20'
             onClick={async () => {
             await sendEmailVerification();
-            toast('Sent email');
+            toast('Sent verification email');
         }}
       >
         send Verification email again

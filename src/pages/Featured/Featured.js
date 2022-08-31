@@ -3,10 +3,10 @@ import React from "react";
 const Featured = () => {
   return (
     <div>
-      <h2 className="text-3xl text-zinc-100 text-center font-mono font-bold mt-32">
+      <h2 className="text-3xl text-zinc-800 text-center font-mono font-bold mt-32">
         Daily Fitness Tips
       </h2>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-16 mx-10 gap-10 mb-32 font-mono">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-16 mx-8 gap-10 mb-32 font-mono">
         <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure>
             <img

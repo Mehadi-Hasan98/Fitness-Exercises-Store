@@ -1,8 +1,10 @@
+import axios from 'axios';
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../Hooks/useToken';
 import Loading from '../Shared/Loading';
 
 const Register = () => {
@@ -18,6 +20,8 @@ const Register = () => {
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+    const [token] = useToken(user || gUser);
+
     const navigate = useNavigate();
     
     let signInError;
@@ -29,13 +33,15 @@ const Register = () => {
     if (error || gError || updateError) {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
-     if(user || gUser){
-        navigate('/items');
+     if(token){
+        navigate('/');
      }
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
+        await axios.post('https://hidden-refuge-89046.herokuapp.com/login', {email});
+        localStorage.setItem('accessToken', data.accessToken);
         console.log('update done');
         navigate('/items')
     }
@@ -44,7 +50,7 @@ const Register = () => {
         <div className='flex h-screen justify-center items-center mt-12 mb-10'>
             <div className="card w-96 shadow-2xl">
                 <div className="card-body">
-                    <h2 className="text-center text-white text-2xl font-bold">Sign Up Form</h2>
+                    <h2 className="text-center text-zinc-600 text-2xl font-bold">Sign Up Form</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         <div className="form-control w-full max-w-xs">
@@ -79,10 +85,6 @@ const Register = () => {
                                     required: {
                                         value: true,
                                         message: 'Email is Required'
-                                    },
-                                    pattern: {
-                                        value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                        message: 'Provide a valid Email'
                                     }
                                 })}
                             />
@@ -117,13 +119,13 @@ const Register = () => {
                         </div>
 
                         {signInError}
-                        <input className='py-2 bg-cyan-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 w-full' type="submit" value="Sign Up" />
+                        <input className='py-2 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 w-full' type="submit" value="Sign Up" />
                     </form>
-                    <p><small className='text-white'>Already have an account ? <Link className='text-white' to="/login">Please login</Link></small></p>
+                    <p><small className='text-zinc-600'>Already have an account ? <Link className='text-blue-600' to="/login">Please login</Link></small></p>
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="py-2 px-4 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+                        className="py-2 px-4 bg-cyan-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
                     >Continue with Google</button>
                 </div>
             </div>

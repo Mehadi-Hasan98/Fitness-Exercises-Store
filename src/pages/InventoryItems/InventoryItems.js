@@ -26,7 +26,7 @@ const InventoryItems = ({item}) => {
     const { name, price, img, description, quantity, supplier } = item;
     return (
         <div className="md:ml-10">
-            <div className="card card-compact bg-base-300 w-80 shadow-2xl">
+            <div className="card card-compact bg-base-200 w-80 shadow-xl">
             <figure>
   <img src={img}/>
 </figure>
